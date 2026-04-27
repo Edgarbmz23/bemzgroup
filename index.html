@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BEMZ GROUP | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; color: #333; }
+        .navbar { background: #0f172a; color: white; position: sticky; top: 0; z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; }
+        .logo span { color: #3b82f6; }
+        .nav-links { display: flex; list-style: none; gap: 1.8rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #3b82f6; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+        .hamburger span { width: 25px; height: 3px; background: white; }
+
+        .hero {
+            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .btn {
+            background: #3b82f6;
+            color: white;
+            padding: 14px 36px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 8px;
+        }
+
+        .section { padding: 100px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h2 { text-align: center; font-size: 2.6rem; margin-bottom: 3rem; color: #1e2937; }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: #cbd5e1;
+            font-size: 1.8rem;
+            margin: 0 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                height: 100vh;
+                width: 100%;
+                background: #0f172a;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 4rem;
+            }
+            .nav-links.active { left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">THE <span>BEMZ</span> GROUP</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>THE BEMZ GROUP</h1>
+            <p>Leadership • Innovation • Technology • Impact</p>
+            <p style="font-size:1.1rem; margin:1rem 0;">BEMZ Foundation • BEMZ IT Solutions</p>
+            
+            <a href="services.html" class="btn">Our Services</a>
+            <a href="aboutus.html" class="btn" style="background:#1e2937;">About Us</a>
+        </div>
+    </section>
+
+    <!-- Quick Intro -->
+    <section class="section" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+        <div class="container">
+            <h2>Welcome to The Bemz Group</h2>
+            <p style="max-width:900px; margin:0 auto; text-align:center; font-size:1.15rem;">
+                A dynamic conglomerate committed to driving sustainable development in Uganda through strong leadership and innovative technology solutions.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size:1.2rem;">THE BEMZ GROUP</p>
+            <p>BEMZ Foundation • BEMZ IT Solutions</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/EdgarBEMZ" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/EdgarBEMZ23" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/bemigisha-edgar" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2026 The Bemz Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
