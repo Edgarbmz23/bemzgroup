@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - THE BEMZ GROUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Same styles as index.html - copy the full <style> block from index.html here if needed */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; color: #333; }
+        .navbar { background: #0f172a; color: white; position: sticky; top: 0; z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; }
+        .logo span { color: #3b82f6; }
+        .nav-links { display: flex; list-style: none; gap: 1.8rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #3b82f6; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+        .hamburger span { width: 25px; height: 3px; background: white; }
+
+        .section { padding: 100px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h2 { text-align: center; font-size: 2.6rem; margin-bottom: 3rem; color: #1e2937; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">THE <span>BEMZ</span> GROUP</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2>About The Bemz Group</h2>
+            <p style="max-width:900px; margin:0 auto 2rem; text-align:center; font-size:1.15rem;">
+                The Bemz Group is a dynamic conglomerate committed to driving sustainable development in Uganda through two powerful pillars: 
+                <strong>BEMZ Foundation</strong> and <strong>BEMZ IT Solutions</strong>.
+            </p>
+            <p style="max-width:900px; margin:0 auto 1.5rem; font-size:1.12rem;">
+                We combine strong leadership development with cutting-edge technology to create meaningful and lasting impact in communities and businesses.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size:1.2rem;">THE BEMZ GROUP</p>
+            <p>BEMZ Foundation • BEMZ IT Solutions</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/EdgarBEMZ" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/EdgarBEMZ23" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/bemigisha-edgar" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2026 The Bemz Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
