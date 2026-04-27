@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - THE BEMZ GROUP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; color: #333; }
+        .navbar { background: #0f172a; color: white; position: sticky; top: 0; z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; }
+        .logo span { color: #3b82f6; }
+        .nav-links { display: flex; list-style: none; gap: 1.8rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #3b82f6; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+        .hamburger span { width: 25px; height: 3px; background: white; }
+
+        .section { padding: 100px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h2 { text-align: center; font-size: 2.6rem; margin-bottom: 3rem; color: #1e2937; }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        input, textarea {
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        textarea { min-height: 160px; resize: vertical; }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">THE <span>BEMZ</span> GROUP</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +256-748545662  |  +256-765351461</p>
+                <p><strong>Email:</strong> <a href="mailto:eddiebemz23@gmail.com" style="color:#3b82f6;">eddiebemz23@gmail.com</a></p>
+            </div>
+
+            <div style="text-align:center; margin:2rem 0;">
+                <a href="https://facebook.com/EdgarBEMZ" target="_blank" style="margin:0 15px; font-size:1.8rem; color:#3b82f6;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/EdgarBEMZ23" target="_blank" style="margin:0 15px; font-size:1.8rem; color:#3b82f6;"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/bemigisha-edgar" target="_blank" style="margin:0 15px; font-size:1.8rem; color:#3b82f6;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://tiktok.com/@EdgarBEMZ" target="_blank" style="margin:0 15px; font-size:1.8rem; color:#3b82f6;"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn" style="width:100%; background:#3b82f6; color:white;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size:1.2rem;">THE BEMZ GROUP</p>
+            <p>BEMZ Foundation • BEMZ IT Solutions</p>
+            <p>&copy; 2026 The Bemz Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your message has been received by The Bemz Group. We will get back to you soon.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
